@@ -208,3 +208,4 @@ __marimo__/
 
 # Additional files
 cleanup-s3-resources.sh
+*.drawio

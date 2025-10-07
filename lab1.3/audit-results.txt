@@ -1,0 +1,52 @@
+AWS Security Audit Report
+Generated: Tue, Oct  7, 2025 10:17:44 AM
+==============================
+
+--- PREREQUISITE CHECKS ---
+✓ AWS CLI is installed
+✓ AWS CLI is properly configured
+ℹ Account ID: 703386051332
+ℹ Default Region: us-west-2
+ℹ User/Role: arn:aws:iam::703386051332:user/migos
+
+--- S3 BUCKET SECURITY AUDIT ---
+ℹ No S3 buckets found in account
+
+--- IAM SECURITY AUDIT ---
+✓ Root account MFA is enabled
+✗ No password policy configured
+ℹ Attempting to generate IAM credential report...
+✓ IAM credential report generated successfully
+
+--- CLOUDTRAIL AUDIT ---
+✗ No CloudTrail trails configured
+
+--- VPC FLOW LOGS AUDIT ---
+ℹ Found 2 VPC(s) to audit
+✗ VPC 'vpc-00239b12e82242246': No active flow logs configured
+✗ VPC 'vpc-0435c4be52a57cf52': No active flow logs configured
+
+--- SECURITY GROUPS AUDIT ---
+✗ 10 security group(s) have SSH (port 22) open to 0.0.0.0/0
+✓ No security groups have RDP open to the world
+
+--- EC2 INSTANCES SECURITY AUDIT ---
+ℹ Found 1 EC2 instance(s) to audit
+⚠ Instance 'i-06954a4d8a57c5441': Has public IP address
+⚠ 1 instance(s) have public IP addresses
+
+--- SECURITY AUDIT SUMMARY ---
+Total Security Checks: 12
+✓ Passed: 5
+⚠ Warnings: 2
+✗ Failed: 5
+Pass Rate: 41%
+
+[1;33mSecurity Status: MODERATE[0m
+Several security issues need attention.
+
+Recommendations:
+1. Address all failed checks immediately
+2. Review and resolve warning items
+3. Implement regular security audits
+4. Review AWS Security Best Practices
